@@ -1,3 +1,6 @@
-with open("text.txt", "r") as file: 
-  s = file.read().split() 
-print(f"Количество слов в файле: {len(s)}")
+file = open("text.txt") #Открываем файл
+words = 0 #Присваиваем значение переменной
+for i in file: #Используем цикл for для нахождения количества слов в файле
+    words += len(i.split()) #Считаем количество слов в файле
+print("Количество слов в файле: ", words) #Выводим количество слов в файле
+file.close()
